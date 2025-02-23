@@ -1,0 +1,20 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+
+--- Test 1: All Zeros (RGB mode) ---
+Time=120000, convolved_rgb=000000, convolved_grey=zz
+
+--- Test 2: Mixed Pattern (RGB mode) ---
+Time=180000, convolved_rgb=010101, convolved_grey=zz
+
+--- Test 2: Mixed Pattern (RGB mode) ---
+Time=240000, convolved_rgb=030303, convolved_grey=zz
+
+--- Test 1: All Zeros (RGB mode) ---
+Time=120000, convolved_rgb=000000, convolved_grey=zz
+
+--- Test 2: Mixed Pattern (RGB mode) ---
+Time=180000, convolved_rgb=010101, convolved_grey=zz
+
+--- Test 2: Mixed Pattern (RGB mode) ---
+Time=240000, convolved_rgb=030303, convolved_grey=zz

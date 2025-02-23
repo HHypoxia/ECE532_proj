@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 11 10:55:32 2025
+# Process ID: 4484
+# Current directory: D:/vivadoproject/project532/ipcore/ImageProcessing
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19672 D:\vivadoproject\project532\ipcore\ImageProcessing\ImageProcessing.xpr
+# Log file: D:/vivadoproject/project532/ipcore/ImageProcessing/vivado.log
+# Journal file: D:/vivadoproject/project532/ipcore/ImageProcessing\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivadoproject/project532/ipcore/ImageProcessing/ImageProcessing.xpr
+update_compile_order -fileset sources_1

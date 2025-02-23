@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_clk_wiz_2_synth_1" LaunchDir="D:/vivadoproject/project532/integration/integrate_camera_vga/integrate_camera_vga.runs/design_1_clk_wiz_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi4stream_vip_0_0_synth_1" LaunchDir="D:/vivadoproject/project532/integration/integrate_camera_vga/integrate_camera_vga.runs/design_1_axi4stream_vip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_stream2vga_0_0_synth_1" LaunchDir="D:/vivadoproject/project532/integration/integrate_camera_vga/integrate_camera_vga.runs/design_1_stream2vga_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

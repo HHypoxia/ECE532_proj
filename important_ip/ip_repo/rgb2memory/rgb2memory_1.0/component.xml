@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>rgb2memory</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.M_AXIS.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.ASSOCIATED_BUSIF">M_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.ASSOCIATED_RESET">m_axis_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>rgb2memory_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c962e96e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>rgb2memory_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c962e96e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>4e9bcced</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16328387</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>rgb_input</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rgb_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rgb_last</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>full_buffer</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_M_AXIS_TDATA_WIDTH</spirit:name>
+        <spirit:displayName>C M AXIS TDATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M_AXIS_START_COUNT</spirit:name>
+        <spirit:displayName>C M AXIS START COUNT</spirit:displayName>
+        <spirit:description>Start count is the number of clock cycles the master will wait before initiating/issuing any transaction.</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXIS_START_COUNT" spirit:order="4" spirit:minimum="1" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../edit_rgb2memory_v1_0.srcs/sources_1/new/rgb2memory_AXIS_master.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/rgb2memory_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_b238451c</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../edit_rgb2memory_v1_0.srcs/sources_1/new/rgb2memory_AXIS_master.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/rgb2memory_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/rgb2memory_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_4e9bcced</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>rgb to stream and put into memory</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_M_AXIS_TDATA_WIDTH</spirit:name>
+      <spirit:displayName>C M AXIS TDATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_M_AXIS_TDATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M_AXIS_START_COUNT</spirit:name>
+      <spirit:displayName>C M AXIS START COUNT</spirit:displayName>
+      <spirit:description>Start count is the number of clock cycles the master will wait before initiating/issuing any transaction.</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_AXIS_START_COUNT" spirit:order="4" spirit:minimum="1" spirit:rangeType="long">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">rgb2memory_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>rgb2memory_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>11</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-02-16T19:46:08Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b051720_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bbc39b3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1231e74c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e314cb0_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f385c64_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@752d3891_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e353b2_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c4b0dc_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53b0fc67_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59f201b5_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65253f34_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64ce7af2_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531e4b58_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3000b613_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@406ca76d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d2424e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@681bdd18_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e8e848_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae25998_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4161e728_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@621215f8_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72ad6400_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77282d80_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7157085_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e26c3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d28cf8b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b66b150_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c26622_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c3a2a5e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35aaae7c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6caedb5d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21729b05_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6541070e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@420cae60_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@172c5865_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dcb0d98_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6351d556_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff19deb_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@641e4953_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a7eec81_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cbc26ef_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@390b6d98_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2203b46b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c7febb2_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a921ccb_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c2e0280_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9cf22f1_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@584e7b70_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa9198a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ac430b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1518fdc2_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a5e1cf7_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@401c7bc5_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222b1f27_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75be7027_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e188f25_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dbc482a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26b78ca4_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50dfe596_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@538e56b3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31d0803a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531252ce_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364aea19_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@510ff2bd_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29f7bc86_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5caf728b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60bd2f3c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c67f486_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b652c02_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@231434c8_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@278d6322_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48b0c1ca_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4817a791_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ea34873_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db75379_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68305add_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb20aec_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7987b258_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63eb3660_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de5ede3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44327282_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a429d9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c5f802b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b54ac5c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c42467_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@539a52a7_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@296792e0_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f5d6ea0_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c90f02_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10e10916_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@618063ab_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fb8ccd9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ee1fdb2_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b23a22_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@987dcc3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@591ab616_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cc7e339_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@198851ab_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47a63bac_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77cac8e8_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ec578a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@547a2837_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b49449_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53bcc026_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c796b3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f62cf76_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@594bcd27_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6edf8349_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71b1817f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e5e96cb_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cfcfb33_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32a24c82_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69db0a42_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bd91e50_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b84aa2b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2048d82c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609ea5e4_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b4dfd2b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ace1d47_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e760543_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19e3f300_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d70a6c9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f4d8b3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29af9879_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/rgb2memory/rgb2memory_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d978904c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="659e1e04"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="abf6c23f"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="987d9724"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ebde8568"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

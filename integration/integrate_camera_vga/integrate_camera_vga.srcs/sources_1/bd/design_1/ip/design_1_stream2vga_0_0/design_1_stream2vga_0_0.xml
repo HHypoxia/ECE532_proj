@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>design_1_stream2vga_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF">S00_SLV</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">resetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_SLV</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.TDATA_NUM_BYTES">2</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.TDEST_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.TID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.TUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.HAS_TREADY">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.HAS_TSTRB">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.HAS_TKEEP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.HAS_TLAST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_SLV.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_SLV.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>resetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>resetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.RESETN.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>resetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pix_r</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pix_g</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pix_b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>hsync</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>vsync</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:description>stream2vga_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_stream2vga_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>stream2vga_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>13</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bd39b00_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f70464e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41b8125_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d8608b4_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ebc6130_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36c47348_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@366af493_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ab37b2f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a13315b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43547c4_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed92968_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203cb193_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2361e36e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a051a6a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74af53d8_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@597ab0b1_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@447fb7f5_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19adb32f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@449d50d8_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c3f5577_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de577ea_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75bf023a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3a0f57_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@685b3aac_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c9a3159_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dde2319_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@387616a9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d69b979_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25ee8da6_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d0c0c28_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5475f321_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b5c1d79_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d78df1b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4953128a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38264863_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e9e2542_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef647f9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53922499_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2017997_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef14b51_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b8942b3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66a1aaa1_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b60dd5b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52abe404_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a798b74_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2106e788_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0b5b9e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@606b8288_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4481fb29_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eee2446_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad41f6f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364d509a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2631bec6_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1234ebd5_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d802717_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0fb429_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@707d090_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b52fe63_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ef5959_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e8b5053_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce00ffc_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc9a0ef_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db9f08_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@302c022f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63d7c2f9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528e304_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b083586_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@123c31cc_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44b5294c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ab55ece_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@798339f6_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59023d94_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc4c2fa_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c6be05a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7956290c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dfb6dd6_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb18116_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1988a443_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3769a57f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4859471d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d86713a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37ecbbca_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5851bb0c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29f23a64_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677ee3b4_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@161e3a8e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@617344b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61eb2410_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f6d24f2_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b1c343a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54858a6a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db7daa8_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55769115_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@565f685b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2fb356_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5887484a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3276a1a5_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64f604c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6178ded_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a5289c7_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e97577a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40507aba_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2746840a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b6135a7_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f29a4d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5881c09d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24a75899_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b2e814c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b46bd3_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5589f978_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74bbd61a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e782ed_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec0c798_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b4dbd83_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@382fe62_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bf9ab7f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4331b6_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40e1b320_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@337d316f_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24adf035_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dcdf515_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30091849_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a165b46_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11a1ed72_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76ca1da5_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ebb0d5c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b23601e_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21cee559_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@defc447_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f6c379d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b571f3c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@326a0534_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e916fcd_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b6b8311_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f920e19_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bcd2534_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2167291a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38efe6b6_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f42368c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5facf337_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8d7f74_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d2f13dd_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@351fa11a_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4372fe94_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@791c8bb9_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f0b6f1_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43824460_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@211d71d_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42ebe037_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d3c15b_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461c8993_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b081c19_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@207b9ac7_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e9d8b28_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3caf4055_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b86f746_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d334b20_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7443e205_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@202e623c_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2634b64_ARCHIVE_LOCATION">d:/vivadoproject/project532/important_ip/ip_repo/stream2vga</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.TDATA_NUM_BYTES" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_SLV.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0effd87f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="389d22ba"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4fb86b6b"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="99db35ae"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
