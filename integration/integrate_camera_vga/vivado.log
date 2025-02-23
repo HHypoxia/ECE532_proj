@@ -47,3 +47,5 @@ set_property synth_checkpoint_mode Hierarchical [get_files  D:/vivadoproject/pro
 set_property synth_checkpoint_mode None [get_files  D:/vivadoproject/project532/integration/integrate_camera_vga/integrate_camera_vga.srcs/sources_1/bd/design_1/design_1.bd]
 set_property synth_checkpoint_mode Hierarchical [get_files  D:/vivadoproject/project532/integration/integrate_camera_vga/integrate_camera_vga.srcs/sources_1/bd/design_1/design_1.bd]
 report_ip_status -name ip_status 
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 23 13:51:14 2025...
