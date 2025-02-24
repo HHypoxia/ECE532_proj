@@ -219,7 +219,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_SRST">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_UNDERFLOW">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_VALID">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_WR_ACK">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_WR_ACK">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_WR_DATA_COUNT">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_HAS_WR_RST">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_IMPLEMENTATION_TYPE">0</spirit:configurableElementValue>
@@ -477,7 +477,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Valid_Flag">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Valid_Sense">Active_High</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.WUSER_Width">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Write_Acknowledge_Flag">false</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Write_Acknowledge_Flag">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Write_Acknowledge_Sense">Active_High</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Write_Clock_Frequency">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Write_Data_Count">false</spirit:configurableElementValue>
@@ -546,6 +546,7 @@
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDEST_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TID_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Empty_Threshold_Assert_Value_axis" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Empty_Threshold_Assert_Value_rach" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Empty_Threshold_Assert_Value_wach" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Empty_Threshold_Assert_Value_wrch" xilinx:valueSource="user"/>
@@ -554,14 +555,19 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.FIFO_Implementation_wach" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.FIFO_Implementation_wrch" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Full_Flags_Reset_Value" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Full_Threshold_Assert_Value_axis" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Full_Threshold_Assert_Value_rach" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Full_Threshold_Assert_Value_wach" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Full_Threshold_Assert_Value_wrch" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.INTERFACE_TYPE" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Input_Depth_axis" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Overflow_Flag_AXI" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Reset_Type" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TKEEP_WIDTH" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TSTRB_WIDTH" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Write_Acknowledge_Flag" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.axis_type" xilinx:valueSource="user"/>
           </xilinx:configElementInfos>
         </xilinx:componentInstanceExtensions>
       </spirit:vendorExtensions>

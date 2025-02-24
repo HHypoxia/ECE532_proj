@@ -1,0 +1,136 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_clk_wiz_2/design_1_clk_wiz_2_clk_wiz.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_clk_wiz_2/design_1_clk_wiz_2.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ipshared/9064/stream2vga/stream2vga.srcs/sources_1/new/vga.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ipshared/9064/stream2vga/stream2vga.srcs/sources_1/new/vga_convert.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_stream2vga_0_0/sim/design_1_stream2vga_0_0.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_fifo_generator_0_0/sim/design_1_fifo_generator_0_0.v" \
+
+sv xil_defaultlib  --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_axi_vip_1_0/sim/design_1_axi_vip_1_0_pkg.sv" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_axi_vip_1_0/sim/design_1_axi_vip_1_0.sv" \
+
+verilog xil_defaultlib  --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
+
+sv xil_defaultlib  --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_axi_vip_0_1/sim/design_1_axi_vip_0_1_pkg.sv" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_axi_vip_0_1/sim/design_1_axi_vip_0_1.sv" \
+
+verilog xil_defaultlib  --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_addr_decode.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_read.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_reg.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_reg_bank.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_top.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_ctrl_write.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_ar_channel.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_aw_channel.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_b_channel.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_arbiter.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_fsm.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_translator.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_fifo.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_r_channel.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_simple_fifo.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wr_cmd_fsm.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_axi_mc_w_channel.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_register_slice.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_upsizer.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_and.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_and.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_or.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_or.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_command_fifo.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel_static.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_r_upsizer.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/axi/mig_7series_v4_2_ddr_w_upsizer.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_arb_mux.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_arb_select.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_bank_cntrl.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_bank_common.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_bank_compare.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_bank_mach.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_bank_queue.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_bank_state.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_col_mach.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_mc.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_rank_cntrl.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_rank_common.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_rank_mach.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ecc/mig_7series_v4_2_ecc_buf.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ecc/mig_7series_v4_2_ecc_dec_fix.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ecc/mig_7series_v4_2_ecc_gen.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ecc/mig_7series_v4_2_ecc_merge_enc.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ecc/mig_7series_v4_2_fi_xor.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_axi.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ip_top/mig_7series_v4_2_mem_intfc.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_of_pre_fifo.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_cntlr.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_data.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_edge.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_lim.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_mux.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_po_cntlr.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_samp.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_oclkdelay_cal.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_prbs_rdlvl.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_tempmon.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl_off_delay.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_ddr_prbs_gen.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_poc_cc.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_poc_edge_store.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_poc_meta.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_poc_pd.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_poc_tap_base.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/phy/mig_7series_v4_2_poc_top.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ui/mig_7series_v4_2_ui_cmd.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ui/mig_7series_v4_2_ui_top.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/design_1_mig_7series_0_5_mig_sim.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_mig_7series_0_5/design_1_mig_7series_0_5/user_design/rtl/design_1_mig_7series_0_5.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_auto_us_2/sim/design_1_auto_us_2.v" \
+"../../../../integrate_camera_vga.ip_user_files/bd/design_1/ip/design_1_auto_cc_0/sim/design_1_auto_cc_0.v" \
+"../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+
+sv xil_defaultlib  --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "../../../../integrate_camera_vga.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../integrate_camera_vga.srcs/sim_1/new/simulation_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
