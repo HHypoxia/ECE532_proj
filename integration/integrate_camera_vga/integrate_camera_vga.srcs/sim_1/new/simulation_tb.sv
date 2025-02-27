@@ -45,9 +45,20 @@ module axi_lite_stimulus_mst();
   reg [31:0] status;
 //Constants
 //AXI GPIO base address and register offsets
-      localparam DMA_SRC_ADDR = 'h18;  // Source address register
-      localparam DMA_LENGTH   = 'h28;  // Transfer length (bytes)
-      localparam DMA_CONTROL  = 'h00;  // Control register
+  localparam MM2S_VDMACR         = 32'h00;  // Control
+  localparam MM2S_VDMASR         = 32'h04;  // Status
+  localparam MM2S_VSIZE          = 32'h50;  // # lines (vertical)
+  localparam MM2S_HSIZE          = 32'h54;  // # bytes/line (horizontal)
+  localparam MM2S_FRMDLY_STRIDE  = 32'h58;  // Stride in lower 16 bits
+  localparam MM2S_START_ADDRESS1 = 32'h5C;  // Start address for frame 1
+  localparam BASE_VDMA           = 32'h44A00000;
+  localparam BASE_ADDR           = 32'h00080000;
+
+  // Example image size
+  localparam HRES             = 640;
+  localparam VRES             = 480;
+  localparam BYTES_PER_PIXEL  = 2;
+  localparam BYTES_PER_LINE   = HRES * BYTES_PER_PIXEL;
   initial begin
     /***********************************************************************************************
     * Before agent is newed, user has to run simulation with an empty testbench to find the hierarchy
@@ -60,16 +71,52 @@ module axi_lite_stimulus_mst();
 
   // DMA Register Map (adjust per your design)
 
-      #1us;
+      
+      wait (DUT.design_1_i.mig_7series_0.init_calib_complete === 1);
+      writeRegister(BASE_VDMA+MM2S_VDMACR, 32'h00000000); 
       // Configure DMA
-      writeRegister(DMA_SRC_ADDR, 'h44A00000);      // Source address
-      #1us;
-      writeRegister(DMA_LENGTH,   640*480*2);       // 640x480 pixels * 2 bytes/pixel
-      #1us;
-      writeRegister(DMA_CONTROL,  1);               // Start transfer
-      #1us;
-      $finish;
-    
+      //-------------------------------------------------------------------------
+    // STEP B: Program Stride & Frame Delay
+    //         The lower 16 bits = Stride, upper 8 bits can be FrameDelay.
+    //         If frame delay = 0, just pack the stride into [15:0].
+    //-------------------------------------------------------------------------
+      writeRegister(BASE_VDMA+MM2S_FRMDLY_STRIDE, BYTES_PER_LINE); 
+      #100;
+    //-------------------------------------------------------------------------
+    // STEP C: Program HSIZE (bytes per scan line)
+    //-------------------------------------------------------------------------
+      writeRegister(BASE_VDMA+MM2S_HSIZE, BYTES_PER_LINE);
+      #100;
+
+    //-------------------------------------------------------------------------
+    // STEP D: Program VSIZE (number of lines)
+    //-------------------------------------------------------------------------
+      writeRegister(BASE_VDMA+MM2S_VSIZE, VRES);
+       #100;
+    //-------------------------------------------------------------------------
+    // STEP E: Set the Start Address for the frame (MM2S_START_ADDRESS1)
+    //-------------------------------------------------------------------------
+      writeRegister(BASE_VDMA+MM2S_START_ADDRESS1, 32'h80000000);
+      
+      #100;
+
+    //-------------------------------------------------------------------------
+    // STEP F: Enable the MM2S channel by setting the Run/Stop bit (bit 0)
+    //-------------------------------------------------------------------------
+      writeRegister(BASE_VDMA+MM2S_VDMACR, 32'h00000001);
+
+    #100;
+    readRegister(BASE_ADDR, Rdatabeat);
+    $display("Register Read: Address = %h, Data = %h", BASE_ADDR, Rdatabeat[0]);
+
+    //-------------------------------------------------------------------------
+    // STEP G: Read back the status register
+    //-------------------------------------------------------------------------
+    readRegister(MM2S_VDMASR, Rdatabeat);
+    $display("MM2S DMA Status Read = %08h", Rdatabeat[0]);
+    readRegister(MM2S_VDMACR, Rdatabeat);
+    $display("MM2S DMA control = %08h", Rdatabeat[0]);
+    #100;
  end
 
 task writeRegister( input xil_axi_ulong              addr =0,
@@ -258,9 +305,9 @@ module axi_lite_stimulus_mst0();
   
 //Constants
 //AXI GPIO base address and register offsets
-  localparam MEM_DEPTH = 640*480/2;  // 153600 entries (2 pixels per 32-bit word)
-  localparam BASE_ADDR = 32'h80000000;
-  reg [31:0] mem_data [0:MEM_DEPTH-1];
+  localparam MEM_DEPTH = 1;//640*480/4;  // 153600 entries (2 pixels per 32-bit word)
+  localparam BASE_ADDR = 32'h00080000;
+  reg [63:0] mem_data [0:MEM_DEPTH-1];
   integer i;
   initial begin
     /***********************************************************************************************
@@ -274,22 +321,25 @@ module axi_lite_stimulus_mst0();
 
 // Preload 16-bit/pixel RGB data (2 pixels per 32-bit word)
 
-  $readmemh("D:/vivadoproject/project532/integration/integrate_camera_vga/frame.mem", mem_data);
-#1us;
-  // Preload memory using for loop
-  
-    for (i = 0; i < MEM_DEPTH; i=i+1) begin
-      writeRegister(BASE_ADDR + (i * 4), mem_data[i]);
+  $readmemh("D:/vivadoproject/project532/integration/integrate_camera_vga/frame1.mem", mem_data);
+  // Preload memory using for losop
+    //wait (DUT.design_1_i.mig_7series_0.init_calib_complete === 1);
+    for (i = 0; i < MEM_DEPTH; i++) begin
+      writeRegister(BASE_ADDR + (i * 8), mem_data[i]);
+      //$display("mem_data[%0d] = %8h", i, mem_data[i]);
     end
+
+//    readRegister(BASE_ADDR, Rdatabeat);
+//    $display("Register Read: Address = %h, Data = %h", BASE_ADDR, Rdatabeat[0]);
   end
   
   task writeRegister( input xil_axi_ulong              addr =0,
-                    input bit [31:0]              data =0
+                    input bit [63:0]              data =0
                 );
 
     single_write_transaction_api("single write with api",
                                  .addr(addr),
-                                 .size(xil_axi_size_t'(2)),
+                                 .size(xil_axi_size_t'(3)),
                                  .data(data)
                                  );
 endtask : writeRegister
@@ -449,7 +499,7 @@ module testbench;
     // Reset generation (active-low)
     initial begin
         aresetn = 0;
-        repeat(50) @(posedge clk);
+        repeat(5000) @(posedge clk);
         aresetn = 1;
     end
 

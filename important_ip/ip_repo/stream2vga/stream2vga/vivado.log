@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Feb 23 20:33:48 2025
-# Process ID: 33576
+# Start of session at: Mon Feb 24 22:17:37 2025
+# Process ID: 7068
 # Current directory: D:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19848 D:\vivadoproject\project532\important_ip\ip_repo\stream2vga\stream2vga\stream2vga.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24968 D:\vivadoproject\project532\important_ip\ip_repo\stream2vga\stream2vga\stream2vga.xpr
 # Log file: D:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga/vivado.log
 # Journal file: D:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga\vivado.jou
 #-----------------------------------------------------------
@@ -17,7 +17,7 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/vivadoproject/project532/important_ip/ip_repo/stream2vga'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/vivadoproject/project532/important_ip/ip_repo/stream2vga' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 853.980 ; gain = 224.898
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 930.008 ; gain = 230.961
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 23 20:39:38 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 24 23:34:24 2025...

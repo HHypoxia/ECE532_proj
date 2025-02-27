@@ -12,7 +12,7 @@ import axi_vip_pkg::*;
       parameter design_1_axi_vip_0_1_VIP_READ_WRITE_MODE    = "READ_WRITE";
       parameter design_1_axi_vip_0_1_VIP_INTERFACE_MODE     = 0;
       parameter design_1_axi_vip_0_1_VIP_ADDR_WIDTH         = 32;
-      parameter design_1_axi_vip_0_1_VIP_DATA_WIDTH         = 32;
+      parameter design_1_axi_vip_0_1_VIP_DATA_WIDTH         = 64;
       parameter design_1_axi_vip_0_1_VIP_ID_WIDTH           = 0;
       parameter design_1_axi_vip_0_1_VIP_AWUSER_WIDTH       = 0;
       parameter design_1_axi_vip_0_1_VIP_ARUSER_WIDTH       = 0;

@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Feb 23 20:33:48 2025
-# Process ID: 33576
+# Start of session at: Mon Feb 24 22:17:37 2025
+# Process ID: 7068
 # Current directory: D:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19848 D:\vivadoproject\project532\important_ip\ip_repo\stream2vga\stream2vga\stream2vga.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24968 D:\vivadoproject\project532\important_ip\ip_repo\stream2vga\stream2vga\stream2vga.xpr
 # Log file: D:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga/vivado.log
 # Journal file: D:/vivadoproject/project532/important_ip/ip_repo/stream2vga/stream2vga\vivado.jou
 #-----------------------------------------------------------
